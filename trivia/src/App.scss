@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+@mixin flex($direction: column, $justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+$bg: #f5f5fa;                     // Background color
+$box-shadow: 0 0 2px #a3a3ff;     // Box shadow color
+$text: #333;                      // Text color
+$difficulty-btn: #e0e0e0;         // Difficulty button color
+$difficulty-hover: #b0b8d4;       // Difficulty button hover color
+$difficulty-checked: #4a90e2;     // Difficulty button checked color
+$btn: #4a90e2;                    // Button color
+$btn-hover: #6ba4e2;              // Button hover color
+$final-screen-heading: #3b8cec;   // Final screen heading color
+$correct: #00b300;                // Correct answer color
+$wrong: #e60000;   
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+#app {
+  min-height: 100vh;
+  @include flex();
+  color: $text;
+  font-family: "Poppins", sans-serif;
+  background: $bg;
+
+  main {
+    width: 100%;
+    margin: 10px 0;
+    @include flex();
+  }
+
+  button {
+    transition: 0.3s;
+    padding: 10px 0;
+    font-size: 1.3rem;
+    margin: 30px auto;
+    width: 200px;
+    background: $btn;
+    color: black;
+    border: 0;
+    box-shadow: $box-shadow;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background: $btn-hover;
+      transform: scale(1.05);
+    }
+  }
+}
